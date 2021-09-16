@@ -1,0 +1,212 @@
+html,
+body,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: radial-gradient(
+    circle,
+    rgba(3, 3, 3, 1) 59%,
+    rgba(0, 18, 82, 1) 100%
+  );
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 0.875rem;
+  color: #fff;
+}
+.root {
+  width: 100%;
+  max-width: 1350px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: column nowrap;
+}
+header {
+  width: 100%;
+}
+.header-container {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px;
+  cursor: pointer;
+}
+.hamburger-menu {
+  visibility: hidden;
+  margin: 0 12px 0 0;
+  font-size: 1.85rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.logo-img {
+  width: 110px;
+  height: 26px;
+  margin-right: 50px;
+}
+.nav-text {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-right: 40px;
+}
+.nav-a-hamburger {
+  margin-right: 40px;
+}
+.header-left,
+.header-right {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.intro-text-big {
+  width: 100%;
+  margin-top: 80px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 4rem;
+}
+#gradient-span {
+  background-image: linear-gradient(
+    135deg,
+    #9e4df6 0%,
+    #5947ea 49.47%,
+    #66cce8 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  display: block;
+}
+.intro-text-desc {
+  max-width: 760px;
+  font-size: 20px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 40px auto 60px auto;
+  padding: 0 24px 0 24px;
+}
+.download-stores-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  padding: 25px 30px 40px;
+  margin: 20px auto 0 auto;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0) 88.26%
+  );
+  border-radius: 20px;
+}
+.stores-img-group {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.stores-img-img-holder {
+  width: 130px;
+  height: 40px;
+  margin: 5px;
+}
+.store-img {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.download-store-text-bottom {
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1440px) {
+  .container {
+    padding: 0 120px;
+  }
+}
+
+@media only screen and (min-width: 150px) and (max-width: 979px) {
+  .hamburger-menu {
+    visibility: visible;
+    margin: 0 12px 0 0;
+  }
+  nav {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    background-color: #030303;
+    box-shadow: 0 10px 4px #000;
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    transition: all ease 0.2s;
+  }
+  .nav-a-hamburger {
+    width: 100%;
+    padding: 16px 80px;
+    border-top: solid 1px #313131;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-right: 40px;
+  }
+  .nav-a-hamburger:hover {
+    width: 100%;
+    padding: 16px 80px;
+    border-top: solid 1px #313131;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-right: 40px;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(234, 231, 246, 1) 35%,
+      rgba(0, 212, 255, 1) 100%
+    );
+    opacity: 0.85;
+  }
+  .open {
+    opacity: 1;
+    z-index: 1;
+    visibility: visible;
+    margin-right: 40px;
+  }
+  .intro-text-big {
+    font-size: 2.5rem;
+    width: 85%;
+    margin: 80px auto 0 auto;
+  }
+  #gradient-span {
+    display: inline;
+  }
+  .download-stores-box {
+    width: auto;
+    max-width: 620px;
+    margin: 0 50px;
+  }
+  .stores-img-group {
+    flex-wrap: wrap;
+  }
+}
